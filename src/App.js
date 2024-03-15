@@ -1,25 +1,22 @@
-import logo from './logo.svg';
+import {useState} from 'react';
 import './App.css';
+import NameInput from './Components/NameInput';
 
-function App() {
+
+
+export default function Board() {
+  const [name, setName] = useState('');
+
+  const handleNameChange = (newName) => {
+    setName(newName);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <div className="Container">
+    <NameInput onNameChange={handleNameChange} />
+    {/* <p>welcome: {name}</p> */}
+   </div>
+    </>
   );
 }
-
-export default App;
