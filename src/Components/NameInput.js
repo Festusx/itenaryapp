@@ -1,27 +1,28 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 
-function NameInput({onNameChange}) {
-  const [name, setName] = useState('');
+// function NameInput({onNameChange}) {
+//   const [name, setName] = useState('');
 
-  const handleChange = (event) => {
-    const newName = event.target.value;
-    setName(newName);
-    onNameChange(newName);
-  };
+//   const handleChange = (event) => {
+//     const newName = event.target.value;
+//     setName(newName);
+//     onNameChange(newName);
+//   };
+  
 
-  return (
-    <div>
-      <label htmlFor="nameInput">Enter Name:</label>
-      <input
-        type="text"
-        id="nameInput"
-        value={name}
-        onChange={handleChange}
-        placeholder="...."
-      />
-      <p>Hello {name ? name : ''}.</p>
-    </div>
-  );
-}
+//   return (
+//     <div>
+//       <label htmlFor="nameInput">Enter Name:</label>
+//       <input
+//         type="text"
+//         id="nameInput"
+//         value={name}
+//         onChange={handleChange}
+//         placeholder=".."
+//       />
+//       {/* <p>welcome {name}</p> */}
+//     </div>
+//   );
+// }
 
-export default NameInput;
+// export default NameInput;

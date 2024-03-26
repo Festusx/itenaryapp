@@ -1,24 +1,79 @@
+/* styles.css */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+
 body {
-  font-family: 'ojuju', sans-serif;
-}
-input::placeholder {
-  font-family: inherit;
-  color: #999; /* Set placeholder text color */
-  font-style: italic; /* Set placeholder text style */
+  /* font-family: 'ojuju', sans-serif; */
+  font-family: "Love Light", cursive;
+  background-color: rgb(73, 36, 48);
 }
 
 .Container{
   width: 100%;
   height: 800px;
-  background-color: rgb(131, 81, 81);
   display: flex;
-  justify-content: center; /* Horizontally center */
+  justify-content: center;
   align-items: center;
-  font-family: 'ojuju', sans-serif;
+  /* font-family: 'ojuju', sans-serif; */
+  font-family: "Love Light", cursive;
   font-optical-sizing: auto;
   font-weight: 600;
   font-style:italic;
 }
 
-.label-container { display: block; }
-input { margin: 9px; }
+
+.video-background {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.video-background video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: white; /* Example text color */
+  text-align: center;
+}
+
+
+.my-input {
+  width: 150px;
+  height: 15px;
+  padding: 8px;
+  position: absolute;
+  top: 380px;
+  right: 310px;
+  font-size: 16px;
+  border: 4px solid #151414;
+  border-radius: 4px;
+  /* box-shadow: inset 0 1px 2px rgba(0,0,0,0.1); */
+  box-shadow: 0px 0px 10px rgba(255, 105, 180, 0.9);
+  outline: none;
+  background-color: rgb(172, 165, 165);
+   font-family: 'ojuju', sans-serif;
+  font-size: large;
+}
+
+.my-input::placeholder {
+  color: #ab3838; /* Placeholder text color */
+  font-family: "Love Light", cursive;
+
+}

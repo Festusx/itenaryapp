@@ -1,21 +1,23 @@
-import {useState} from 'react';
+// import {useState} from 'react';
 import './App.css';
-import NameInput from './Components/NameInput';
-
+import LandingComponent from './Components/Landing';
+import Button from './Components/NewButton';
 
 
 export default function Board() {
-  const [name, setName] = useState('');
-
-  const handleNameChange = (newName) => {
-    setName(newName);
+  const handleClick = () => {
+    console.log('Button clicked!');
   };
 
   return (
     <>
     <div className="Container">
-    <NameInput onNameChange={handleNameChange} />
-    {/* <p>welcome: {name}</p> */}
+      <LandingComponent />
+
+      <h1>EnterName<input type='text' className='my-input' placeholder=''></input></h1>
+      <Button onClick={handleClick} variant="secondary" size="medium">SUBMIT
+      </Button>
+      
    </div>
     </>
   );
